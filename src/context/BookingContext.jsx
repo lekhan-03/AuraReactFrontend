@@ -4,17 +4,17 @@ import { accommodationsData } from '../data/accommodationsData';
 const BookingContext = createContext();
 
 export const AVAILABLE_ADDONS = [
-  { id: 'spa-pass', name: 'Private Thermal Onsen & Hydrotherapy Pass', price: 180, perGuest: true },
-  { id: 'michelin-dining', name: 'Five-Course Private Chef Wine Pairing Dinner', price: 280, perGuest: true },
-  { id: 'vip-transfer', name: 'VIP Electric Luxury Limousine Airport Transfer', price: 150, perGuest: false },
-  { id: 'eco-coral', name: 'Reef Restoration & Coral Adoption Contribution', price: 100, perGuest: false },
+  { id: 'spa-pass', name: 'Master Vaidya Ayurvedic Panchakarma & Shirodhara Session', price: 12500, perGuest: true },
+  { id: 'michelin-dining', name: 'Grand 18-Course South Indian Sadhya / Royal Thali Tasting', price: 14500, perGuest: true },
+  { id: 'vip-transfer', name: 'VIP Electric Luxury Chauffeur Airport & Sanctuary Transfer', price: 8500, perGuest: false },
+  { id: 'eco-restoration', name: 'Western Ghats & Backwater Eco-Restoration Pledge', price: 5000, perGuest: false },
 ];
 
 const INITIAL_STATE = {
   step: 1, // 1: Dates & Destination, 2: Suite Selection, 3: Addons & Guest Info, 4: Summary & Confirm
-  destination: 'kyoto',
-  checkIn: '2026-09-10',
-  checkOut: '2026-09-15',
+  destination: 'kerala',
+  checkIn: '2026-10-14',
+  checkOut: '2026-10-19',
   guests: { adults: 2, children: 0 },
   selectedSuite: accommodationsData[0],
   selectedAddons: ['spa-pass'],
@@ -22,7 +22,7 @@ const INITIAL_STATE = {
     fullName: '',
     email: '',
     phone: '',
-    country: '',
+    country: 'India',
     specialRequests: '',
     flightNumber: '',
     agreeTerms: false,
@@ -90,18 +90,18 @@ function bookingReducer(state, action) {
           promoSuccess: 'Promo AURAECO applied: 15% Eco Sanctuary Credit!',
           promoError: '',
         };
-      } else if (code === 'ZEN') {
+      } else if (code === 'NAMASTE' || code === 'ZEN') {
         return {
           ...state,
           promoCode: code,
-          discountAmount: 250, // Fixed $250 credit
-          promoSuccess: 'Promo ZEN applied: $250 Rejuvenation Credit!',
+          discountAmount: 15000, // Fixed ₹15,000 credit
+          promoSuccess: `Promo ${code} applied: ₹15,000 Heritage Welcome Credit!`,
           promoError: '',
         };
       } else {
         return {
           ...state,
-          promoError: 'Invalid promo code. Try LUMINA20, AURAECO, or ZEN.',
+          promoError: 'Invalid promo code. Try LUMINA20, AURAECO, or NAMASTE.',
           promoSuccess: '',
         };
       }
@@ -166,7 +166,7 @@ export function BookingProvider({ children }) {
       calculatedDiscount = Math.min(state.discountAmount, rawTotal);
     }
 
-    const ecoTaxesAndFees = Math.round((rawTotal - calculatedDiscount) * 0.08); // 8% eco tax
+    const ecoTaxesAndFees = Math.round((rawTotal - calculatedDiscount) * 0.12); // 12% luxury tax & eco cess
     const grandTotal = Math.max(0, rawTotal - calculatedDiscount + ecoTaxesAndFees);
 
     return {

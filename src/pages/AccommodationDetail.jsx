@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { accommodationsData } from '../data/accommodationsData';
-import { useCurrency } from '../../src/hooks/useCurrency';
+import { useCurrency } from '../hooks/useCurrency';
 import { useUser } from '../context/UserContext';
 import { useToast } from '../context/ToastContext';
 import { useBooking } from '../context/BookingContext';

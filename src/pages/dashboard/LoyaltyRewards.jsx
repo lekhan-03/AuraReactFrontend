@@ -14,15 +14,15 @@ export default function LoyaltyRewards() {
     if (loyaltyPoints < cost) {
       return;
     }
-    success(`Successfully redeemed "${perkName}"! Your digital concierge voucher has been issued.`);
+    success(`Successfully redeemed "${perkName}"! Your digital sanctuary concierge voucher has been issued.`);
   };
 
   return (
     <div>
       <div style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>Aura Elite Membership & Loyalty</h2>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>Aura Elite Indian Circle & Loyalty</h2>
         <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-          Every night booked generates 10 loyalty points per $ spent, unlocking private privileges and bespoke credits.
+          Every night booked earns sanctuary loyalty points, unlocking private Ayurvedic therapies, palace upgrades, and culinary privileges.
         </p>
       </div>
 
@@ -73,16 +73,16 @@ export default function LoyaltyRewards() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
         <div style={{ background: 'var(--bg-tertiary)', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-glass)' }}>
           <Gift size={20} color="var(--gold-primary)" style={{ marginBottom: '0.5rem' }} />
-          <h4 style={{ fontSize: '1rem', marginBottom: '0.3rem' }}>Complimentary Onsen Spa Pass</h4>
+          <h4 style={{ fontSize: '1rem', marginBottom: '0.3rem' }}>Ayurvedic Shirodhara Spa Pass</h4>
           <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-            90-Minute private geothermal mineral bath & herbal tea service.
+            90-Minute Vaidya herbal oil stream and warm medicated botanical bath.
           </p>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <strong style={{ fontSize: '0.9rem', color: 'var(--gold-light)' }}>12,000 PTS</strong>
             <button
               className="btn btn-outline btn-sm"
               disabled={loyaltyPoints < 12000}
-              onClick={() => handleRedeemPerk('Complimentary Onsen Spa Pass', 12000)}
+              onClick={() => handleRedeemPerk('Ayurvedic Shirodhara Spa Pass', 12000)}
             >
               Redeem
             </button>
@@ -91,16 +91,16 @@ export default function LoyaltyRewards() {
 
         <div style={{ background: 'var(--bg-tertiary)', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-glass)' }}>
           <Sparkles size={20} color="var(--gold-primary)" style={{ marginBottom: '0.5rem' }} />
-          <h4 style={{ fontSize: '1rem', marginBottom: '0.3rem' }}>Grand Cru Cellar Tasting</h4>
+          <h4 style={{ fontSize: '1rem', marginBottom: '0.3rem' }}>Royal Tea & Spice Cellar Tasting</h4>
           <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-            Private sommelier tasting with 4 biodynamic vintage pairings.
+            Private tea sommelier session with 4 rare Nilgiri & Assam single-estate flushes.
           </p>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <strong style={{ fontSize: '0.9rem', color: 'var(--gold-light)' }}>18,000 PTS</strong>
             <button
               className="btn btn-outline btn-sm"
               disabled={loyaltyPoints < 18000}
-              onClick={() => handleRedeemPerk('Grand Cru Cellar Tasting', 18000)}
+              onClick={() => handleRedeemPerk('Royal Tea & Spice Cellar Tasting', 18000)}
             >
               Redeem
             </button>
@@ -109,16 +109,16 @@ export default function LoyaltyRewards() {
 
         <div style={{ background: 'var(--bg-tertiary)', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-glass)' }}>
           <ShieldCheck size={20} color="var(--gold-primary)" style={{ marginBottom: '0.5rem' }} />
-          <h4 style={{ fontSize: '1rem', marginBottom: '0.3rem' }}>Private Electric Limousine Escort</h4>
+          <h4 style={{ fontSize: '1rem', marginBottom: '0.3rem' }}>Private Electric Airport Chauffeur</h4>
           <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-            Airport airside VIP escort & private transfer to resort sanctuary.
+            VIP airport escort & private luxury electric transfer directly to sanctuary.
           </p>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <strong style={{ fontSize: '0.9rem', color: 'var(--gold-light)' }}>25,000 PTS</strong>
             <button
               className="btn btn-outline btn-sm"
               disabled={loyaltyPoints < 25000}
-              onClick={() => handleRedeemPerk('Private Electric Limousine Escort', 25000)}
+              onClick={() => handleRedeemPerk('Private Electric Airport Chauffeur', 25000)}
             >
               Redeem
             </button>

@@ -13,7 +13,7 @@ export default function Footer() {
       warning('Please provide a valid email address to receive private invitations.');
       return;
     }
-    success('Thank you for joining the AURA Curated Circle. Private voyage dispatches will arrive shortly.');
+    success('Thank you for joining the AURA Indian Heritage Circle. Private voyage dispatches will arrive shortly.');
     setEmail('');
   };
 
@@ -28,40 +28,41 @@ export default function Footer() {
               <h3 style={{ fontSize: '1.3rem', letterSpacing: '0.1em' }}>AURA SANCTUARIES</h3>
             </div>
             <p style={{ fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-              A collection of five remote, ultra-luxury biophilic sanctuaries dedicated to deep natural reconnection, architectural preservation, and regenerative hospitality.
+              A curated collection of ultra-luxury biophilic & heritage sanctuaries across South India and the Himalayas, dedicated to Vedic wellness, architectural conservation, and regenerative hospitality.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', color: 'var(--text-gold)' }}>
-                <Leaf size={14} color="var(--emerald-primary)" /> 100% Microgrid Powered
+                <Leaf size={14} color="var(--emerald-primary)" /> 100% Microgrid Solar Powered
               </span>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', color: 'var(--text-gold)' }}>
-                <Award size={14} color="var(--gold-primary)" /> Prix Versailles Laureate 2025
+                <Award size={14} color="var(--gold-primary)" /> Indian Heritage Architecture Laureate 2025
               </span>
             </div>
           </div>
 
-          {/* Col 2: Sanctuaries */}
+          {/* Col 2: Indian Sanctuaries */}
           <div className="footer-col">
-            <h4>SANCTUARIES</h4>
+            <h4>INDIAN SANCTUARIES</h4>
             <ul>
-              <li><Link to="/accommodations?destination=kyoto">Kyoto Arashiyama, Japan</Link></li>
-              <li><Link to="/accommodations?destination=maldives">Baa Atoll Biosphere, Maldives</Link></li>
-              <li><Link to="/accommodations?destination=alps">Zermatt Alpine Crest, Switzerland</Link></li>
-              <li><Link to="/accommodations?destination=tulum">Tulum Cenote Sanctuary, Mexico</Link></li>
-              <li><Link to="/accommodations?destination=amalfi">Amalfi Cliffside Perch, Italy</Link></li>
+              <li><Link to="/accommodations?destination=kerala">Kumarakom Backwaters, Kerala</Link></li>
+              <li><Link to="/accommodations?destination=wayanad">Wayanad Western Ghats, Kerala</Link></li>
+              <li><Link to="/accommodations?destination=hampi">Hampi Boulder Sanctuary, Karnataka</Link></li>
+              <li><Link to="/accommodations?destination=chettinad">Chettinad Palaces, Tamil Nadu</Link></li>
+              <li><Link to="/accommodations?destination=udaipur">Udaipur Lake Pichola, Rajasthan</Link></li>
+              <li><Link to="/accommodations?destination=ladakh">Ladakh High-Altitude Sanctuary</Link></li>
             </ul>
           </div>
 
           {/* Col 3: Experiences & Portal */}
           <div className="footer-col">
-            <h4>DISCOVERY</h4>
+            <h4>DISCOVERY & VITALITY</h4>
             <ul>
-              <li><Link to="/experiences/wellness">Holistic Hydrotherapy & Spa</Link></li>
-              <li><Link to="/experiences/dining">Michelin Zero-Km Dining</Link></li>
-              <li><Link to="/experiences/adventures">Regenerative Nature Expeditions</Link></li>
-              <li><Link to="/experiences/retreats">Private Meditation Retreats</Link></li>
-              <li><Link to="/dashboard/loyalty">Aura Elite Loyalty Program</Link></li>
-              <li><Link to="/about">Sustainability Promise</Link></li>
+              <li><Link to="/experiences/wellness">Ayurvedic Panchakarma & Shirodhara</Link></li>
+              <li><Link to="/experiences/dining">Grand 18-Course South Indian Sadhya</Link></li>
+              <li><Link to="/experiences/adventures">Tungabhadra Coracle & Rainforest Safaris</Link></li>
+              <li><Link to="/experiences/retreats">Silent Kalaripayattu & Yoga Retreats</Link></li>
+              <li><Link to="/dashboard/loyalty">Aura Elite Indian Membership</Link></li>
+              <li><Link to="/about">Western Ghats Ecology Promise</Link></li>
             </ul>
           </div>
 
@@ -69,7 +70,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>PRIVATE DISPATCHES</h4>
             <p style={{ fontSize: '0.88rem', marginBottom: '0.5rem' }}>
-              Receive seasonal private villa openings, bespoke expedition dates, and culinary previews.
+              Receive seasonal private villa openings, monsoon wellness retreats, and culinary previews.
             </p>
             <form onSubmit={handleSubscribe} className="newsletter-form">
               <input
@@ -88,11 +89,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} AURA Sanctuaries & Eco-Resorts International. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AURA Sanctuaries & Heritage Eco-Resorts India. All rights reserved.</p>
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
             <Link to="/about">Privacy Charter</Link>
             <Link to="/about">Regenerative Hospitality Terms</Link>
-            <Link to="/contact">Concierge Support</Link>
+            <Link to="/contact">Indian Concierge Hotline</Link>
           </div>
         </div>
       </div>

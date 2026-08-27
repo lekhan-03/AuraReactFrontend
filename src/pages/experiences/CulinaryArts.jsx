@@ -128,7 +128,7 @@ export default function CulinaryArts() {
               <label className="field-label">Dietary Preferences or Allergies</label>
               <textarea
                 rows={3}
-                placeholder="E.g., Pescatarian, strictly no shellfish, gluten-conscious..."
+                placeholder="E.g., Pure Sattvic vegetarian, Jain prepared (no root veg), gluten-conscious, fresh coastal catch..."
                 value={dietaryNotes}
                 onChange={(e) => setDietaryNotes(e.target.value)}
               />

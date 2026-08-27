@@ -4,12 +4,12 @@ import { useToast } from '../../context/ToastContext';
 import { Save, User, Mail, Phone, Globe, Check } from 'lucide-react';
 
 const DIETARY_OPTIONS = [
-  'Plant-Based Gourmet',
+  'Sattvic Pure Vegetarian',
+  'South Indian Vegetarian Gourmet',
   'Gluten-Conscious',
-  'Pescatarian Only',
-  'Strictly No Shellfish',
-  'Keto / Low-Glycemic',
-  'Kosher / Halal Prepared'
+  'Jain Prepared (No Root Veg)',
+  'Fresh Coastal Catch Only',
+  'Plant-Based Organic Vegan'
 ];
 
 export default function ProfileSettings() {
@@ -20,8 +20,8 @@ export default function ProfileSettings() {
     name: profile.name || '',
     email: profile.email || '',
     phone: profile.phone || '',
-    country: profile.country || '',
-    preferredCurrency: profile.preferredCurrency || 'USD',
+    country: profile.country || 'India',
+    preferredCurrency: profile.preferredCurrency || 'INR',
     dietaryPreferences: profile.dietaryPreferences || [],
   });
 
@@ -61,7 +61,7 @@ export default function ProfileSettings() {
     }
 
     updateProfile(formData);
-    success('Your sanctuary guest profile & preferences have been updated.');
+    success('Your Indian sanctuary guest profile & Ayurvedic preferences have been updated.');
   };
 
   return (
@@ -69,7 +69,7 @@ export default function ProfileSettings() {
       <div style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>Profile & Sanctuary Preferences</h2>
         <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-          Update your contact credentials and dietary requirements for our culinary and wellness teams.
+          Update your contact credentials and dietary requirements for our culinary and Ayurvedic wellness teams.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export default function ProfileSettings() {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="e.g. Lady Genevieve Sterling"
+              placeholder="e.g. Dr. Raghavendra Rao"
             />
             {formErrors.name && <span className="field-error-msg">{formErrors.name}</span>}
           </div>
@@ -94,7 +94,7 @@ export default function ProfileSettings() {
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="e.g. genevieve@example.com"
+              placeholder="e.g. raghavendra@example.in"
             />
             {formErrors.email && <span className="field-error-msg">{formErrors.email}</span>}
           </div>
@@ -106,7 +106,7 @@ export default function ProfileSettings() {
               type="text"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              placeholder="+1 (415) 555-0192"
+              placeholder="+91 98450 89234"
             />
             {formErrors.phone && <span className="field-error-msg">{formErrors.phone}</span>}
           </div>
@@ -118,16 +118,16 @@ export default function ProfileSettings() {
               type="text"
               value={formData.country}
               onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-              placeholder="United Kingdom"
+              placeholder="India"
             />
           </div>
         </div>
 
         {/* Dietary Preferences Checkboxes */}
         <div style={{ background: 'var(--bg-tertiary)', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-glass)' }}>
-          <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Culinary & Biometric Dietary Needs</h4>
+          <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Culinary & Ayurvedic Dietary Needs</h4>
           <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-            Our Michelin kitchen teams will prepare your personalized menus around these selections:
+            Our master chefs and Vaidyas will prepare your personalized menus around these selections:
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem' }}>
@@ -175,7 +175,7 @@ export default function ProfileSettings() {
 
         <button type="submit" className="btn btn-primary" style={{ alignSelf: 'flex-start' }}>
           <Save size={16} />
-          <span>Save Preferences</span>
+          <span>Save Sanctuary Preferences</span>
         </button>
       </form>
     </div>

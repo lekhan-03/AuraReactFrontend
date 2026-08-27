@@ -68,7 +68,7 @@ export default function MyReservations() {
             >
               {/* Thumbnail */}
               <img
-                src={res.image || 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=400&q=80'}
+                src={res.image || 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=400&q=80'}
                 alt={res.suiteTitle}
                 style={{ width: '100%', height: '90px', objectFit: 'cover', borderRadius: 'var(--radius-sm)' }}
               />
@@ -134,7 +134,7 @@ export default function MyReservations() {
         {selectedVoucher && (
           <div className="voucher-pass-card" style={{ padding: '2rem', textAlign: 'center' }}>
             <div style={{ fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold-primary)', fontWeight: 700 }}>
-              AURA SANCTUARIES • OFFICIAL GUEST PASS
+              AURA INDIAN SANCTUARIES • OFFICIAL GUEST PASS
             </div>
             <h3 style={{ fontSize: '1.4rem', margin: '0.5rem 0' }}>{selectedVoucher.suiteTitle}</h3>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
@@ -152,11 +152,11 @@ export default function MyReservations() {
               </div>
               <div>
                 <span style={{ color: 'var(--text-muted)' }}>Check-In Arrival:</span>
-                <strong style={{ display: 'block' }}>{selectedVoucher.checkIn} (15:00)</strong>
+                <strong style={{ display: 'block' }}>{selectedVoucher.checkIn} (14:00 IST)</strong>
               </div>
               <div>
                 <span style={{ color: 'var(--text-muted)' }}>Check-Out Departure:</span>
-                <strong style={{ display: 'block' }}>{selectedVoucher.checkOut} (12:00)</strong>
+                <strong style={{ display: 'block' }}>{selectedVoucher.checkOut} (11:00 IST)</strong>
               </div>
             </div>
 
@@ -167,7 +167,7 @@ export default function MyReservations() {
               </div>
             </div>
             <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-              Present this digital pass upon arrival for priority electric helicopter/yacht escort.
+              Present this digital pass upon arrival for priority VIP electric chauffeur and solar houseboat escort.
             </p>
           </div>
         )}

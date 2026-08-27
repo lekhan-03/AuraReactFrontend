@@ -13,7 +13,7 @@ export default function Accommodations() {
   const selectedCategory = searchParams.get('category') || 'All';
   const selectedDestination = searchParams.get('destination') || 'all';
   const selectedSort = searchParams.get('sort') || 'recommended';
-  const maxPrice = Number(searchParams.get('maxPrice')) || 2500;
+  const maxPrice = Number(searchParams.get('maxPrice')) || 100000;
 
   const debouncedSearch = useDebounce(searchQuery, 300);
 
@@ -63,7 +63,7 @@ export default function Accommodations() {
         <span className="section-eyebrow">The Architecture Collection</span>
         <h1>Sanctuary Accommodations</h1>
         <p className="section-subtitle" style={{ maxWidth: '680px', margin: '0.8rem auto 0 auto' }}>
-          Explore our handcrafted villas, overwater pavilions, and alpine chalets designed with regenerative biophilic principles.
+          Explore our handcrafted floating pavilions, rainforest treehouses, boulder villas, and heritage palaces designed with regenerative biophilic and vernacular principles.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export default function Accommodations() {
           <SearchX size={48} color="var(--gold-primary)" style={{ margin: '0 auto 1rem auto' }} />
           <h3>No Sanctuary Accommodations Match Your Filter</h3>
           <p style={{ maxWidth: '460px', margin: '0.5rem auto 1.5rem auto', fontSize: '0.92rem' }}>
-            Try broadening your price range, clearing search terms, or exploring other destination locations.
+            Try broadening your tariff range, clearing search terms, or exploring other Indian sanctuary destinations.
           </p>
         </div>
       )}

@@ -505,7 +505,7 @@ export default function Booking() {
                   </div>
                 )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)' }}>
-                  <span>Regenerative Eco-Tax & Clean Energy Fee (8%)</span>
+                  <span>Regenerative Indian Eco-Tax & Clean Energy Fee (12%)</span>
                   <span>{formatPrice(priceBreakdown.ecoTaxesAndFees)}</span>
                 </div>
               </div>
@@ -522,7 +522,7 @@ export default function Booking() {
               <form onSubmit={handleApplyPromo} style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.75rem' }}>
                 <input
                   type="text"
-                  placeholder="Promo Code (LUMINA20)"
+                  placeholder="Promo Code (LUMINA20 or NAMASTE)"
                   value={promoInput}
                   onChange={(e) => setPromoInput(e.target.value)}
                   style={{ flex: 1, textTransform: 'uppercase', fontSize: '0.82rem' }}
