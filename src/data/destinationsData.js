@@ -40,7 +40,7 @@ export const destinationsData = [
     lat: 15.3350,
     lon: 76.4600,
     timezone: 'Asia/Kolkata',
-    heroImage: 'https://images.unsplash.com/photo-1600100397608-f010e42152fa?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAX-APuvkuC5f09ZtIw-ngzd4iCJOlj8EZT5jkfuv_9Zszx86lwEYkr-SB&s=10',
     description: 'Carved harmoniously amidst billion-year-old granite boulder landscapes overlooking the Tungabhadra River, featuring stone pavilion villas, private coracle boat excursions, and starlit temple acoustic meditations.',
     features: ['Granite Monolith Pavilions', 'Electric Coracle River Voyages', 'Vijayanagara Stone Architecture', 'Stargazing Astronomy Deck'],
   },
