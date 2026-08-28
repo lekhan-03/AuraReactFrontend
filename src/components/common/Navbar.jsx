@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link to="/" className="navbar-brand" onClick={closeMobileMenu}>
           <Compass className="brand-icon" />
           <div>
-            <span>AURA</span>
+            <span>INDIAN</span>
             <span className="brand-tag">SANCTUARIES</span>
           </div>
         </Link>
